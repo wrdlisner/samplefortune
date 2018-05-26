@@ -23,14 +23,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqM-eq-UVr">
-                                <rect key="frame" x="149" y="358" width="76" height="80"/>
+                                <rect key="frame" x="149" y="368" width="76" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
                                 <state key="normal" title="tap it!">
                                     <color key="titleColor" red="0.85049175126903553" green="0.22771889908110576" blue="0.81178507906199104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SGj-Lc-gIh" kind="show" id="c5g-MZ-otH"/>
+                                    <action selector="tapMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwD-kn-Roi"/>
+                                    <segue destination="SGj-Lc-gIh" kind="presentation" id="CjY-fr-2ue"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pIR-uB-i18">
@@ -45,19 +46,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mickey.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="x9U-Y1-VK2">
-                                <rect key="frame" x="67" y="440" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-eH-jEI">
-                                <rect key="frame" x="84" y="576" width="207" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">"Love does not dominate; it cultivates."
-Goethe</string>
-                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の口説き文句" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9E-EF-NwJ">
                                 <rect key="frame" x="59" y="136" width="257" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,6 +53,10 @@ Goethe</string>
                                 <color key="textColor" red="1" green="0.21441478104886358" blue="0.23562851516613059" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mickey.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="x9U-Y1-VK2">
+                                <rect key="frame" x="67" y="488" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.91415518535341067" blue="0.9628237185427807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -79,19 +71,43 @@ Goethe</string>
         <scene sceneID="E3P-Ju-DJ3">
             <objects>
                 <viewController id="SGj-Lc-gIh" customClass="resultViewController" customModule="samplefortune" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="57l-Aj-O51">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="next" id="57l-Aj-O51">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dti-Y6-hMo">
+                                <rect key="frame" x="139" y="8" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-Qc-2lc">
-                                <rect key="frame" x="67" y="123" width="240" height="128"/>
+                                <rect key="frame" x="38" y="144" width="298" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="『俺と付き合わなかったら後悔するよ』" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P5F-vl-ZQ5">
-                                <rect key="frame" x="32" y="306" width="312" height="128"/>
+                                <rect key="frame" x="32" y="345" width="312" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NO0-x3-3Vz">
+                                <rect key="frame" x="102" y="442" width="171" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                <state key="normal" title="try again">
+                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rePlay:" destination="SGj-Lc-gIh" eventType="touchUpInside" id="qdo-hw-l0d"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-eH-jEI">
+                                <rect key="frame" x="84" y="549" width="207" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">"Love does not dominate; it cultivates."
+Goethe</string>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -100,6 +116,7 @@ Goethe</string>
                     </view>
                     <connections>
                         <outlet property="resultView" destination="GeF-Qc-2lc" id="ydb-O0-RNm"/>
+                        <outlet property="resultWords" destination="P5F-vl-ZQ5" id="uxY-XS-zYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYG-WG-iTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,6 +126,7 @@ Goethe</string>
     </scenes>
     <resources>
         <image name="1" width="640" height="426"/>
+        <image name="heart.jpg" width="480" height="480"/>
         <image name="love.jpg" width="480" height="480"/>
         <image name="mickey.jpeg" width="859" height="540"/>
     </resources>
